@@ -1,1 +1,1 @@
-# Card Uygulaması
+# Pokemon Card Uygulaması

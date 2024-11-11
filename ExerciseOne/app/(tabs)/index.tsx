@@ -14,7 +14,7 @@ const charmanderData = {
 
 const squirtleData = {
   name: "Squirtle",
-  image: require("@/assets/images/squirtle.png"), // Replace with the actual image path
+  image: require("@/assets/images/squirtle.png"),
   type: "Water",
   hp: 44,
   moves: ["Tackle", "Water Gun", "Tail Whip", "Withdraw"],
@@ -23,7 +23,7 @@ const squirtleData = {
 
 const bulbasaurData = {
   name: "Bulbasaur",
-  image: require("@/assets/images/bulbasaur.png"), // Replace with the actual image path
+  image: require("@/assets/images/bulbasaur.png"),
   type: "Grass",
   hp: 45,
   moves: ["Tackle", "Vine Whip", "Growl", "Leech Seed"],
@@ -32,7 +32,7 @@ const bulbasaurData = {
 
 const pikachuData = {
   name: "Pikachu",
-  image: require("@/assets/images/pikachu.png"), // Replace with the actual image path
+  image: require("@/assets/images/pikachu.png"),
   type: "Electric",
   hp: 35,
   moves: ["Quick Attack", "Thunderbolt", "Tail Whip", "Growl"],
