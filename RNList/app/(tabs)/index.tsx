@@ -1,11 +1,12 @@
-import { StyleSheet, Text, View, ScrollView, SafeAreaView, StatusBar } from 'react-native';
+import { StyleSheet, Text, View, ScrollView, SafeAreaView, StatusBar, FlatList } from 'react-native';
 import pokemonList from "@/data.json";
 
 export default function HomeScreen() {
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={styles.scrollView}>
+      {/* <ScrollView style={styles.scrollView}>
       {pokemonList.map(pokemon => {
+        console.log(pokemon.id)
         return(
           <View style={styles.card} key={pokemon.id}>
             <Text  style={styles.cardText}> {pokemon.type} </Text>
@@ -13,7 +14,22 @@ export default function HomeScreen() {
           </View>
         );
       })}
-      </ScrollView>
+      </ScrollView> */}
+
+      <View style={styles.scrollView}>
+        <FlatList data={pokemonList}
+          renderItem={({ item }) => {
+            console.log(item.id)
+            return (
+              <View style={styles.card} key={item.id}>
+                <Text style={styles.cardText}> {item.type} </Text>
+                <Text> {item.name} </Text>
+              </View>
+            );
+          }}
+          keyExtractor={(item, index) => item.id.toString()}
+        />
+      </View>
     </SafeAreaView>
   );
 };
