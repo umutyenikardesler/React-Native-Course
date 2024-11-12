@@ -42,10 +42,10 @@ const pikachuData = {
     return (
         <SafeAreaView style={styles.container}>
           <ScrollView>
-          <PokemonCard {...charmanderData} />
-        <PokemonCard {...squirtleData} />
-        <PokemonCard {...bulbasaurData} />
-        <PokemonCard {...pikachuData} />
+            <PokemonCard {...charmanderData} />
+            <PokemonCard {...squirtleData} />
+            <PokemonCard {...bulbasaurData} />
+            <PokemonCard {...pikachuData} />
           </ScrollView>
         </SafeAreaView>
     );
