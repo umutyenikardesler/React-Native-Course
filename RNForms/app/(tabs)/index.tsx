@@ -58,22 +58,23 @@
 // });
 
 
-import { StyleSheet, View, Text, StatusBar, TextInput, SafeAreaView, Switch, Button } from 'react-native';
+import { StyleSheet, View, Text, StatusBar, TextInput, SafeAreaView, Button, Image, KeyboardAvoidingView, Platform } from 'react-native';
 import { useState } from 'react';
 
 export default function App() {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
   return(
-    <View style={styles.container}>
+    <KeyboardAvoidingView behavior='padding' keyboardVerticalOffset={Platform.OS === "ios" ? 150 : 315 } style={styles.container}>  // Platformlara göre klavye yüksekliğini belirliyoruz 
       <View style={styles.form}>
+      <Image source={require("@/assets/images/adaptive-icon.png")} style={styles.image} />
       <Text style={styles.label}> Username </Text>
       <TextInput style={styles.input} placeholder='Enter your username' value={username} onChangeText={setUsername} />
       <Text style={styles.label}> Password </Text>
-      <TextInput style={styles.input} placeholder='Enter your password' value={password} onChangeText={setPassword} secureTextEntry />
+      <TextInput style={styles.input} placeholder='Enter your password' value={password} onChangeText={setPassword} />
       <Button title='Login' onPress={() => {}} />
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 }
 
@@ -111,4 +112,10 @@ const styles = StyleSheet.create({
     padding: 10,
     borderRadius: 5,
   },
+  image: {
+    width: 200, 
+    height: 400,
+    alignSelf: "center",
+    marginBottom: 50,
+  }
 });
