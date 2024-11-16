@@ -1,6 +1,6 @@
 # Expo Uygulamama Hoşgeldiniz 👋
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Yeni bir proje oluşturmak için: [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
 ## Öyleyse Başlayalım
 
