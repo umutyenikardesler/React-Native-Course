@@ -2,7 +2,7 @@ import { NavigationContainer, NavigationIndependentTree } from '@react-navigatio
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from '@/screens/HomeScreen';
 import AboutScreen from '@/screens/AboutScreen';
-import { Pressable, Text } from 'react-native';
+import { Pressable, Text, View } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,9 +27,12 @@ export default function App() {
             backgroundColor: "#e8e4f3"
           },
         }}>
-          <Stack.Screen name="Home" component={HomeScreen} options={{
-            title: "Welcome Home",
-            headerStyle: {
+          <Stack.Screen 
+            name="Home" 
+            component={HomeScreen} 
+            options={{
+              title: "Welcome Home",
+              headerStyle: {
               backgroundColor: "#6a51ae"
             },
             headerTintColor: "#fff",
@@ -45,11 +48,15 @@ export default function App() {
               backgroundColor: "#e8e4f3"
             }
           }} />
-          <Stack.Screen name="About" component={AboutScreen} initialParams={{
-            name: "Guest"
+          <Stack.Screen 
+            name="About" 
+            component={AboutScreen} 
+            initialParams={{
+              name: "Guest",
           }} />
         </Stack.Navigator>
       </NavigationContainer>
     </NavigationIndependentTree>
+    
   );
 }
