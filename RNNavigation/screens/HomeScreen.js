@@ -6,7 +6,7 @@ export default function HomeScreen({ navigation, route }) {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Home Screen</Text>
-      <Text>{route.params?.result}</Text>
+      <Text  style={styles.text}>{route.params?.result}</Text>
       <Button 
         title="Go to About" 
         onPress={() => 
@@ -19,7 +19,7 @@ export default function HomeScreen({ navigation, route }) {
 }
 
 const styles = StyleSheet.create({
-  container: {
+  container:  {
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
