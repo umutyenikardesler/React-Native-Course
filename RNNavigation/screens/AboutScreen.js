@@ -5,7 +5,7 @@ export default function AboutScreen({ route, navigation }) {
   const {name} = route.params; 
   return (
     <View style={styles.container}>
-      <Text style={styles.text}> About {name} </Text>
+      <Text className="font-bold bg-yellow-300"> About {name} </Text>
       <Button title="Update the name" onPress={() => navigation.setParams({
         name: "Codevolution"
       })} />
